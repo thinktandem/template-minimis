@@ -29,12 +29,11 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
-        "drupal/core": "^8.6",
-        "drush/drush": "~9",
-        "drupal/console": "~1.0",
         "thinktandem/minimis": "dev-8.x-1.x"
     },
     "require-dev": {
+        "drush/drush": "^9.0",
+        "drupal/console": "^1.0.2",
         "behat/behat": "3.*",
         "behat/mink": "~1.7",
         "behat/mink-extension": "^2.2",
@@ -86,8 +85,5 @@
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
         "patches-file": "composer.patches.json"
-    },
-    "replace": {
-        "drupal/drupal": "*"
     }
 }
