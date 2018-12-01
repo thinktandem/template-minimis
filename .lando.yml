@@ -1,5 +1,5 @@
 # Change this name to something that makes sense for your project
-name: infiniteawesome
+name: minimis-platformsh
 
 # Use the recipe appropriate for your application.
 recipe: drupal8
@@ -14,11 +14,11 @@ config:
   webroot: web
 
   # Set this to match the version in your .platform.app.yaml.
-  php: 7.1
+  php: 7.2
 
   # Lando defaults to the latest MySQL release, but Platform.sh uses MariaDB.
   # Specify the version to match what's in services.yaml.
-  database: mariadb:10.1
+  database: mariadb
 
 # The following additional build step will install the Platform CLI
 # in the application container and auto-run `composer install`
