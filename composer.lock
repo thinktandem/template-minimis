@@ -2697,9 +2697,6 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
-                },
-                "patches_applied": {
-                    "https://dgo.to/2924549 Invoke hook after a site install is complete": "https://www.drupal.org/files/issues/core-post-site-install-hook.patch"
                 }
             },
             "autoload": {
@@ -6316,7 +6313,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinktandem/minimis",
-                "reference": "4263f95861f85093ea91ae6670c6b9809099a769"
+                "reference": "365942e8a00cc07b60e9c9366b8b007ec1436f5e"
             },
             "require": {
                 "composer/installers": "^1.2",
@@ -6439,7 +6436,7 @@
                 }
             ],
             "description": "Thinktandem's Minimis Distribution",
-            "time": "2018-12-01T12:58:08+00:00"
+            "time": "2018-12-02T15:12:50+00:00"
         },
         {
             "name": "twbs/bootstrap",
