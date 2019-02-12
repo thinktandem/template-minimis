@@ -31,9 +31,8 @@ services:
       - "chmod ug+x /var/www/.platformsh/bin/platform"
       - "cd $LANDO_MOUNT && composer install"
     overrides:
-      services:
-        environment:
-          BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://nginx/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
+      environment:
+        BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://nginx/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
 
 # The following entry creates a `lando platform` command that will run
 # any Platform CLI command from inside the container if desired.
