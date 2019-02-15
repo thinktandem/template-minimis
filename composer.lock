@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e76ce49f471c741089ef9bc975ff4fdf",
+    "content-hash": "b81694bd2f8e22682a1f961a004e34ee",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2060,17 +2060,17 @@
         },
         {
             "name": "drupal/bootstrap_barrio",
-            "version": "4.19.0",
+            "version": "4.21.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/bootstrap_barrio",
-                "reference": "8.x-4.19"
+                "reference": "8.x-4.21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.19.zip",
-                "reference": "8.x-4.19",
-                "shasum": "4d8f534845d276cf0d5af1973af8e5b7531fe068"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_barrio-8.x-4.21.zip",
+                "reference": "8.x-4.21",
+                "shasum": "0b784ce274a3c940aa6d25da4ea5ff2d80c1e419"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2081,8 +2081,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.19",
-                    "datestamp": "1549543680",
+                    "version": "8.x-4.21",
+                    "datestamp": "1550057880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3119,23 +3119,22 @@
         },
         {
             "name": "drupal/entity_browser",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_browser",
-                "reference": "8.x-2.0"
+                "reference": "8.x-2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.0.zip",
-                "reference": "8.x-2.0",
-                "shasum": "683a7a252c947433c7b78bb838d6d8973c13cf77"
+                "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "56cf190f3ea3fc0af71becbc44af5954a71f216b"
             },
             "require": {
                 "drupal/core": "~8.0"
             },
             "require-dev": {
-                "drupal/ctools": "*",
                 "drupal/inline_entity_form": "*",
                 "drupal/paragraphs": "*",
                 "drupal/token": "*"
@@ -3147,8 +3146,8 @@
                     "dev-8.x-1.x": "8.1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0",
-                    "datestamp": "1536328684",
+                    "version": "8.x-2.1",
+                    "datestamp": "1550237365",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3210,7 +3209,7 @@
         },
         {
             "name": "drupal/entity_browser_entity_form",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "require": {
                 "drupal/core": "~8.0",
                 "drupal/entity_browser": "self.version",
@@ -3222,8 +3221,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0",
-                    "datestamp": "1536328684",
+                    "version": "8.x-2.1",
+                    "datestamp": "1550237365",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3531,17 +3530,17 @@
         },
         {
             "name": "drupal/layout_builder_restrictions",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/layout_builder_restrictions",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "2ef65a8a2c4808d94d169601de467a5d3673421c"
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_restrictions-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "1b041511d0343520036854156d0ca4391cd7559e"
             },
             "require": {
                 "drupal/core": "^8.5.0-rc1"
@@ -3552,8 +3551,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1546439280",
+                    "version": "8.x-1.4",
+                    "datestamp": "1550089686",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4269,86 +4268,53 @@
         },
         {
             "name": "drush/drush",
-            "version": "9.5.2",
+            "version": "9.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "17f0106706391675a281c6d212850853bdbe90f9"
+                "reference": "9d46a2a67554ae8b6f6edec234a1272c3b4c6a9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/17f0106706391675a281c6d212850853bdbe90f9",
-                "reference": "17f0106706391675a281c6d212850853bdbe90f9",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/9d46a2a67554ae8b6f6edec234a1272c3b4c6a9e",
+                "reference": "9d46a2a67554ae8b6f6edec234a1272c3b4c6a9e",
                 "shasum": ""
             },
             "require": {
-                "chi-teck/drupal-code-generator": "^1.27.0",
+                "chi-teck/drupal-code-generator": "^1.24.0",
                 "composer/semver": "^1.4",
-                "consolidation/annotated-command": "^2.9.1",
+                "consolidation/annotated-command": "^2.8.1",
                 "consolidation/config": "^1.1.0",
                 "consolidation/output-formatters": "^3.1.12",
                 "consolidation/robo": "^1.1.5",
-                "consolidation/site-alias": "^1.1.5",
+                "consolidation/site-alias": "^1.1.2",
                 "ext-dom": "*",
                 "grasmash/yaml-expander": "^1.1.1",
                 "league/container": "~2",
                 "php": ">=5.6.0",
                 "psr/log": "~1.0",
                 "psy/psysh": "~0.6",
-                "symfony/config": "^3.4",
-                "symfony/console": "^3.4",
-                "symfony/event-dispatcher": "^3.4",
-                "symfony/finder": "^3.4",
-                "symfony/process": "^3.4",
-                "symfony/var-dumper": "^3.4",
-                "symfony/yaml": "^3.4",
+                "symfony/config": "~2.2|^3",
+                "symfony/console": "~2.7|^3",
+                "symfony/event-dispatcher": "~2.7|^3",
+                "symfony/finder": "~2.7|^3",
+                "symfony/process": "~2.7|^3",
+                "symfony/var-dumper": "~2.7|^3|^4",
+                "symfony/yaml": "~2.3|^3",
                 "webflo/drupal-finder": "^1.1",
                 "webmozart/path-util": "^2.1.0"
             },
             "require-dev": {
-                "composer/installers": "^1.2",
-                "cweagans/composer-patches": "~1.0",
-                "drupal/alinks": "1.0.0",
-                "drupal/devel": "^1.0@RC",
-                "drupal/empty_theme": "1.0",
                 "g1a/composer-test-scenarios": "^2.2.0",
                 "lox/xhprof": "dev-master",
-                "phpunit/phpunit": "^4.8.36 || ^6.1",
-                "squizlabs/php_codesniffer": "^2.7",
-                "vlucas/phpdotenv": "^2.4",
-                "webflo/drupal-core-strict": "8.6.x-dev"
+                "phpunit/phpunit": "^4.8.36|^5.5.4",
+                "squizlabs/php_codesniffer": "^2.7"
             },
             "bin": [
                 "drush"
             ],
             "type": "library",
             "extra": {
-                "installer-paths": {
-                    "sut/core": [
-                        "type:drupal-core"
-                    ],
-                    "sut/libraries/{$name}": [
-                        "type:drupal-library"
-                    ],
-                    "sut/modules/unish/{$name}": [
-                        "drupal/devel"
-                    ],
-                    "sut/themes/unish/{$name}": [
-                        "drupal/empty_theme"
-                    ],
-                    "sut/modules/contrib/{$name}": [
-                        "type:drupal-module"
-                    ],
-                    "sut/profiles/contrib/{$name}": [
-                        "type:drupal-profile"
-                    ],
-                    "sut/themes/contrib/{$name}": [
-                        "type:drupal-theme"
-                    ],
-                    "sut/drush/contrib/{$name}": [
-                        "type:drupal-drush"
-                    ]
-                },
                 "branch-alias": {
                     "dev-master": "9.x-dev"
                 }
@@ -4400,7 +4366,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2018-10-17T18:37:53+00:00"
+            "time": "2018-09-04T17:24:36+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -5721,25 +5687,25 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v2.8.49",
+            "version": "v3.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "7b1692e418d7ccac24c373528453bc90e42797de"
+                "reference": "8ca29297c29b64fb3a1a135e71cb25f67f9fdccf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/7b1692e418d7ccac24c373528453bc90e42797de",
-                "reference": "7b1692e418d7ccac24c373528453bc90e42797de",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/8ca29297c29b64fb3a1a135e71cb25f67f9fdccf",
+                "reference": "8ca29297c29b64fb3a1a135e71cb25f67f9fdccf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": "^5.5.9|>=7.0.8"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -5770,7 +5736,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-11T11:18:13+00:00"
+            "time": "2019-01-16T09:39:14+00:00"
         },
         {
             "name": "symfony/debug",
@@ -6497,6 +6463,61 @@
             "time": "2018-09-21T06:26:08+00:00"
         },
         {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        },
+        {
             "name": "symfony/process",
             "version": "v3.4.22",
             "source": {
@@ -6917,38 +6938,45 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.4.22",
+            "version": "v4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "2159335b452d929cbb9921fc4eb7d1bfed32d0be"
+                "reference": "223bda89f9be41cf7033eeaf11bc61a280489c17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2159335b452d929cbb9921fc4eb7d1bfed32d0be",
-                "reference": "2159335b452d929cbb9921fc4eb7d1bfed32d0be",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/223bda89f9be41cf7033eeaf11bc61a280489c17",
+                "reference": "223bda89f9be41cf7033eeaf11bc61a280489c17",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8",
-                "symfony/polyfill-mbstring": "~1.0"
+                "php": "^7.1.3",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php72": "~1.5"
             },
             "conflict": {
-                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0",
+                "symfony/console": "<3.4"
             },
             "require-dev": {
                 "ext-iconv": "*",
+                "symfony/console": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0",
                 "twig/twig": "~1.34|~2.4"
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
                 "ext-intl": "To show region name in time zone dump",
-                "ext-symfony_debug": ""
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
             },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -6982,7 +7010,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-01-29T16:19:17+00:00"
+            "time": "2019-01-30T11:44:30+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -7071,7 +7099,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinktandem/minimis",
-                "reference": "6d83cbcfaf12a323958bf629d2b64552974ffedb"
+                "reference": "428a4cbc233ad921aa63ac38603639572af6e414"
             },
             "require": {
                 "composer/installers": "^1.2",
@@ -7121,18 +7149,17 @@
                 "behat/mink": "~1.7",
                 "behat/mink-extension": "^2.2",
                 "behat/mink-goutte-driver": "~1.2",
-                "drupal/coder": "^8.2",
+                "drupal/coder": "^8.2.12",
                 "drupal/drupal-extension": "^3.1",
                 "drush-ops/behat-drush-endpoint": "^0.0.4",
                 "jcalderonzumba/gastonjs": "~1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
                 "mikey179/vfsstream": "~1.2",
-                "overtrue/phplint": "^1.0",
-                "phpunit/phpunit": "^4.8",
+                "overtrue/phplint": "^0.2.4",
+                "phpunit/phpunit": "~4.8",
                 "squizlabs/php_codesniffer": "2.*",
-                "symfony/css-selector": "^3.4",
-                "webflo/drupal-core-require-dev": "~8.6",
-                "wikimedia/composer-merge-plugin": "dev-master"
+                "symfony/css-selector": "^3.4.0",
+                "webflo/drupal-core-require-dev": "^8.6.0"
             },
             "type": "drupal-profile",
             "extra": {
@@ -7204,7 +7231,7 @@
                 }
             ],
             "description": "Thinktandem's Minimis Distribution",
-            "time": "2019-02-12T16:03:17+00:00"
+            "time": "2019-02-15T18:31:45+00:00"
         },
         {
             "name": "twbs/bootstrap",
@@ -7899,30 +7926,31 @@
         },
         {
             "name": "behat/mink",
-            "version": "v1.7.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/Mink.git",
-                "reference": "e6930b9c74693dff7f4e58577e1b1743399f3ff9"
+                "reference": "d5ee350c40baff5f331a05ebdbe1927345c9ac8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/Mink/zipball/e6930b9c74693dff7f4e58577e1b1743399f3ff9",
-                "reference": "e6930b9c74693dff7f4e58577e1b1743399f3ff9",
+                "url": "https://api.github.com/repos/minkphp/Mink/zipball/d5ee350c40baff5f331a05ebdbe1927345c9ac8b",
+                "reference": "d5ee350c40baff5f331a05ebdbe1927345c9ac8b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1",
-                "symfony/css-selector": "~2.1|~3.0"
+                "symfony/css-selector": "^2.7|^3.0|^4.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "~2.7|~3.0"
+                "symfony/phpunit-bridge": "^3.3|^4.0"
             },
             "suggest": {
                 "behat/mink-browserkit-driver": "extremely fast headless driver for Symfony\\Kernel-based apps (Sf2, Silex)",
                 "behat/mink-goutte-driver": "fast headless driver for any app without JS emulation",
                 "behat/mink-selenium2-driver": "slow, but JS-enabled driver for any app (requires Selenium2)",
-                "behat/mink-zombie-driver": "fast and JS-enabled headless driver for any app (requires node.js)"
+                "behat/mink-zombie-driver": "fast and JS-enabled headless driver for any app (requires node.js)",
+                "dmore/chrome-mink-driver": "fast and JS-enabled driver for any app (requires chromium or google chrome)"
             },
             "type": "library",
             "extra": {
@@ -7953,7 +7981,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2016-03-05T08:26:18+00:00"
+            "time": "2018-06-24T20:08:51+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -8127,16 +8155,16 @@
         },
         {
             "name": "behat/mink-selenium2-driver",
-            "version": "v1.3.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/MinkSelenium2Driver.git",
-                "reference": "473a9f3ebe0c134ee1e623ce8a9c852832020288"
+                "reference": "8684ee4e634db7abda9039ea53545f86fc1e105a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/473a9f3ebe0c134ee1e623ce8a9c852832020288",
-                "reference": "473a9f3ebe0c134ee1e623ce8a9c852832020288",
+                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/8684ee4e634db7abda9039ea53545f86fc1e105a",
+                "reference": "8684ee4e634db7abda9039ea53545f86fc1e105a",
                 "shasum": ""
             },
             "require": {
@@ -8145,7 +8173,7 @@
                 "php": ">=5.3.1"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
+                "mink/driver-testsuite": "dev-master"
             },
             "type": "mink-driver",
             "extra": {
@@ -8184,7 +8212,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2016-03-05T09:10:18+00:00"
+            "time": "2018-10-10T12:39:06+00:00"
         },
         {
             "name": "behat/transliterator",
@@ -8286,72 +8314,34 @@
         },
         {
             "name": "drupal/coder",
-            "version": "3.1.0",
+            "version": "8.2.12",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/coder",
-                "reference": "8.x-3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/coder-8.x-3.1.zip",
-                "reference": "8.x-3.1",
-                "shasum": "2b708aba48606ee1ec449278fd3cc22cf9f21eab"
+                "url": "https://git.drupal.org/project/coder.git",
+                "reference": "984c54a7b1e8f27ff1c32348df69712afd86b17f"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "ext-mbstring": "*",
+                "php": ">=5.4.0",
+                "squizlabs/php_codesniffer": ">=2.8.1 <3.0",
+                "symfony/yaml": ">=2.0.0"
             },
             "require-dev": {
-                "drupal/rules": "*"
+                "phpunit/phpunit": ">=3.7 <6"
             },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.1",
-                    "datestamp": "1537541580",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
+            "type": "phpcodesniffer-standard",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
-            "authors": [
-                {
-                    "name": "douggreen",
-                    "homepage": "https://www.drupal.org/user/29191"
-                },
-                {
-                    "name": "mikejw",
-                    "homepage": "https://www.drupal.org/user/868770"
-                },
-                {
-                    "name": "pfrenssen",
-                    "homepage": "https://www.drupal.org/user/382067"
-                },
-                {
-                    "name": "solotandem",
-                    "homepage": "https://www.drupal.org/user/240748"
-                },
-                {
-                    "name": "stella",
-                    "homepage": "https://www.drupal.org/user/66894"
-                },
-                {
-                    "name": "sun",
-                    "homepage": "https://www.drupal.org/user/54136"
-                }
-            ],
+            "description": "Coder is a library to review Drupal code.",
             "homepage": "https://www.drupal.org/project/coder",
-            "support": {
-                "source": "http://cgit.drupalcode.org/coder"
-            }
+            "keywords": [
+                "code review",
+                "phpcs",
+                "standards"
+            ],
+            "time": "2017-03-18T10:28:49+00:00"
         },
         {
             "name": "drupal/drupal-driver",
@@ -9936,12 +9926,116 @@
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
             "time": "2019-01-16T21:31:25+00:00"
+        },
+        {
+            "name": "symfony/phpunit-bridge",
+            "version": "v3.4.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/phpunit-bridge.git",
+                "reference": "6a2148bfc6ca0016846a32bdc55a317274283709"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/6a2148bfc6ca0016846a32bdc55a317274283709",
+                "reference": "6a2148bfc6ca0016846a32bdc55a317274283709",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+            },
+            "suggest": {
+                "ext-zip": "Zip support is required when using bin/simple-phpunit",
+                "symfony/debug": "For tracking deprecated interfaces usages at runtime with DebugClassLoader"
+            },
+            "bin": [
+                "bin/simple-phpunit"
+            ],
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                },
+                "thanks": {
+                    "name": "phpunit/phpunit",
+                    "url": "https://github.com/sebastianbergmann/phpunit"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Bridge\\PhpUnit\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony PHPUnit Bridge",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-30T13:30:37+00:00"
+        },
+        {
+            "name": "webflo/drupal-core-require-dev",
+            "version": "8.6.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webflo/drupal-core-require-dev.git",
+                "reference": "c083ddd802bda504d836dc0d4fea44cf2e6f191f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/c083ddd802bda504d836dc0d4fea44cf2e6f191f",
+                "reference": "c083ddd802bda504d836dc0d4fea44cf2e6f191f",
+                "shasum": ""
+            },
+            "require": {
+                "behat/mink": "1.7.x-dev",
+                "behat/mink-goutte-driver": "^1.2",
+                "behat/mink-selenium2-driver": "1.3.x-dev",
+                "drupal/coder": "^8.2.12",
+                "drupal/core": "8.6.9",
+                "jcalderonzumba/gastonjs": "^1.0.2",
+                "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
+                "mikey179/vfsstream": "^1.2",
+                "phpspec/prophecy": "^1.7",
+                "phpunit/phpunit": "^4.8.35 || ^6.5",
+                "symfony/css-selector": "^3.4.0",
+                "symfony/debug": "^3.4.0",
+                "symfony/phpunit-bridge": "^3.4.3"
+            },
+            "type": "metapackage",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "require-dev dependencies from drupal/core",
+            "time": "2019-02-08T12:31:37+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "thinktandem/minimis": 20
+        "thinktandem/minimis": 20,
+        "behat/mink": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
