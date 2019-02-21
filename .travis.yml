@@ -1,51 +1,66 @@
 language: php
-dist: trusty
-sudo: false
 
+# This can be set to whatever you want since Lando is taking care of your deps
 php:
-  - 5.6
-  - 7.0
   - 7.1
-  - 7.2
 
-env:
-  global:
-    - SIMPLETEST_DB=sqlite://tmp/site.sqlite
-    - SIMPLETEST_BASE_URL="http://127.0.0.1:8080"
-  matrix:
-    - RELEASE=stable COMPOSER_CHANNEL=stable
-    - RELEASE=dev COMPOSER_CHANNEL=stable
-    - RELEASE=stable COMPOSER_CHANNEL=snapshot
-
-matrix:
-  exclude:
-    - php: 5.6
-      env: RELEASE=dev COMPOSER_CHANNEL=stable
-    - php: 5.6
-      env: RELEASE=stable COMPOSER_CHANNEL=snapshot
+services:
+  - docker
 
 before_install:
-  - if [[ $TRAVIS_PHP_VERSION = 5.6 ]]; then export COMPOSER_MEMORY_LIMIT=-1; fi;
-  - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-  - phpenv config-rm xdebug.ini
-  - composer --verbose self-update --$COMPOSER_CHANNEL
-  - composer --version
 
-install:
-  - composer --verbose validate
-  - composer --verbose install
+  # Install Lando
+  - sudo apt-get -y update
+  - sudo apt-get -y install cgroup-bin curl
+  - curl -fsSL -o /tmp/lando.deb https://github.com/lando/lando/releases/download/v3.0.0-beta.47/lando-v3.0.0-beta.47.deb
+  - sudo dpkg -i /tmp/lando.deb
+
+  # Sanity check to make sure we are rolling
+  - lando version
 
 script:
-  - if [[ $RELEASE = dev ]]; then composer --verbose remove --no-update drupal/console; fi;
-  - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.7.x-dev webflo/drupal-core-require-dev:8.7.x-dev; fi;
-  - if [[ $RELEASE = dev ]]; then composer --verbose update; fi;
-  - cd $TRAVIS_BUILD_DIR/web
-  - ./../vendor/bin/drush site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite
-  - ./../vendor/bin/drush runserver $SIMPLETEST_BASE_URL &
-  - until curl -s $SIMPLETEST_BASE_URL; do true; done > /dev/null
-  # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
-  # Ignore PageCache group temporarily, @see https://www.drupal.org/node/2770673
-  # Ignore Setup group temporarily, @see https://www.drupal.org/node/2962157
-  - ./../vendor/bin/phpunit -c core --testsuite unit --exclude-group Composer,DependencyInjection,PageCache,Setup
-  - ./../vendor/bin/drush
-  - if [[ $RELEASE = stable ]]; then ./../vendor/bin/drupal; fi;
+
+  # Switch the lando files and start
+  - rm -f .lando.yml
+  - cp -rf .lando.travis.yml .lando.yml
+  - lando start -- -v
+
+  # Run non-db required tests eg linting/code standards/unit tests
+  # Lint the codez
+  - lando phplint
+
+  # Check code standards
+  # lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
+  # lando phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc web/modules web/themes web/profiles
+
+  # Unit tests
+  # cd web
+  # lando phpunit -c core --testsuite unit --exclude-group Composer
+  # cd ..
+
+  # Do platform stuff
+  # Verify we are logged in
+  - lando platform auth:info
+
+  # Generate and post an ssh key and then wait because Platform seems to
+  # refresh keys every 90 seconds
+  # NOTE: If you are getting consistent DB pull failures then you might want to increase the sleep
+  - lando platform ssh-key:add -y
+  - sleep 200
+
+  # Dump and import the database
+  - lando platform db:dump --gzip --file=dump.sql.gz --project=$PLATFORMSH_PROJECT_ID --environment=master --identity-file=/var/www/.ssh/id_rsa
+  - lando db-import dump.sql.gz
+  - rm -f dump.sql.gz
+
+  # This could be potentially problematic if someone adds their own ssh key after we generate one above
+  # and before we run the below
+  - lando ssh -c "/var/www/.platformsh/bin/platform ssh-key:delete \$(/var/www/.platformsh/bin/platform ssh-keys --format=csv | tail -1 | cut -d ',' -f 1)"
+
+  # Check to see if we succeeded
+  - cd web
+  - lando drush status && lando drush cr
+  - cd ..
+
+  # Run db required tests eg behat
+  - lando behat --config=/app/tests/behat-lando.yml

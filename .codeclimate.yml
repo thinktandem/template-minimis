@@ -1,0 +1,23 @@
+---
+plugins:
+  phpmd:
+    enabled: true
+    config:
+      file_extensions: "php,inc,module,install,theme"
+      rulesets: ".phpmd.xml"
+  phpcodesniffer:
+    enabled: true
+    config:
+      file_extensions: "php,inc,module,install,theme"
+      encoding: utf-8
+      standard: "Drupal"
+      ignore_warnings: true
+exclude_patterns:
+  - web/modules/contrib/
+  - drush/
+  - scripts/
+  - load.environment.php
+  - web/*.php
+  - web/.ht.router.php
+  - web/sites/*.php
+  - web/sites/default/*.php
