@@ -38,9 +38,7 @@ script:
 
   # Do platform stuff
   # Verify we are logged in
-  - echo $PLATFORMSH_PROJECT_ID
-  - echo $PLATFORMSH_CLI_TOKEN
-  - lando platform auth:info -vvvv
+  - lando platform auth:info
 
   # Generate and post an ssh key and then wait because Platform seems to
   # refresh keys every 90 seconds
