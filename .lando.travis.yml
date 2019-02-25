@@ -25,7 +25,7 @@ config:
 services:
   appserver:
     build:
-      - "mkdir /var/www/.platformsh && mkdir /var/www/.platformsh/bin"
+      - "mkdir -p /var/www/.platformsh/bin"
       - "curl -fsSL -o /var/www/.platformsh/bin/platform https://github.com/platformsh/platformsh-cli/releases/download/v3.40.2/platform.phar"
       - "chmod ug+x /var/www/.platformsh/bin/platform"
       - "cd /app && composer install"

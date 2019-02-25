@@ -2,7 +2,7 @@ language: php
 
 # This can be set to whatever you want since Lando is taking care of your deps
 php:
-  - 7.1
+  - 7.2
 
 services:
   - docker
@@ -27,7 +27,7 @@ script:
 
   # Run non-db required tests eg linting/code standards/unit tests
   # Lint the codez
-  - lando phplint
+  #- lando phplint
 
   # Check code standards
   # lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
