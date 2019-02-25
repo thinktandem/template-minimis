@@ -21,9 +21,9 @@ before_install:
 script:
 
   # Switch the lando files and start
-  - rm -f .lando.yml
+  - rm -f .lando.base.yml
   - cp -rf .lando.travis.yml .lando.yml
-  - lando start -- -v
+  - lando start -v
 
   # Run non-db required tests eg linting/code standards/unit tests
   # Lint the codez
