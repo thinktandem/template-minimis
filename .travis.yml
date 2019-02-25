@@ -20,10 +20,8 @@ before_install:
 
 script:
 
-  # Switch the lando files and start
-  - rm -f .lando.yml
-  - cp -rf .lando.travis.yml .lando.yml
-  - lando start -- -v
+  # Start
+  - lando start -v
 
   # Run non-db required tests eg linting/code standards/unit tests
   # Lint the codez
@@ -40,7 +38,7 @@ script:
 
   # Do platform stuff
   # Verify we are logged in
-  - lando platform auth:info
+  - lando platform auth:info -vvvv
 
   # Generate and post an ssh key and then wait because Platform seems to
   # refresh keys every 90 seconds
