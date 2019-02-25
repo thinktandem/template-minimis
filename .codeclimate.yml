@@ -14,6 +14,7 @@ plugins:
       ignore_warnings: true
 exclude_patterns:
   - web/modules/contrib/
+  - web/themes/contrib/
   - drush/
   - scripts/
   - load.environment.php
