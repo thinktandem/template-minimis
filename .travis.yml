@@ -38,6 +38,8 @@ script:
   # lando phpunit -c core --testsuite unit --exclude-group Composer
   # cd ..
 
+  - lando config
+
   # Do platform stuff
   # Verify we are logged in
   - lando platform auth:info
