@@ -31,8 +31,8 @@ services:
       - "cd /app && composer install"
     overrides:
       environment:
-        PLATFORMSH_CLI_TOKEN: $PLATFORMSH_CLI_TOKEN
-        PLATFORMSH_PROJECT_ID: $PLATFORMSH_PROJECT_ID
+        PLATFORMSH_CLI_TOKEN: "$PLATFORMSH_CLI_TOKEN"
+        PLATFORMSH_PROJECT_ID: "$PLATFORMSH_PROJECT_ID"
         BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://nginx/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
 
 # The following entry creates a `lando platform` command that will run
