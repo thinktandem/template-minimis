@@ -42,6 +42,7 @@ script:
   # lando phpunit -c core --testsuite unit --exclude-group Composer
   # cd ..
 
+  # Sleep for 10 seconds so certs can load
   - sleep 10
 
   # Do platform stuff
@@ -69,4 +70,4 @@ script:
   - cd ..
 
   # Run db required tests eg behat
-  - lando behat --config=/app/tests/behat-lando.yml
+  #- lando behat --config=/app/tests/behat-lando.yml
