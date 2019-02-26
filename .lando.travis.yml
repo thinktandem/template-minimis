@@ -35,11 +35,6 @@ services:
         PLATFORMSH_PROJECT_ID: $PLATFORMSH_PROJECT_ID
         BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://nginx/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
 
-# Ensure `composer install` also happens every time you start your site
-events:
-  post-db-import:
-    - appserver: "cd /app && composer install"
-
 # The following entry creates a `lando platform` command that will run
 # any Platform CLI command from inside the container if desired.
 tooling:
