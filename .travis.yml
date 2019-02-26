@@ -20,6 +20,8 @@ script:
   - rm -f .lando.base.yml
   - cp -rf .lando.travis.yml .lando.yml
 
+  - sudo curl -L https://packagecloud.io/github/git-lfs/ubuntu | sudo apt-key add -
+
   # Setup hyperdrive
   - hyperdrive -y --name "James T. Kirk" --email kirk@enterprise.mil
 
