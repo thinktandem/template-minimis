@@ -33,6 +33,11 @@ services:
       environment:
         PLATFORMSH_CLI_TOKEN: "$PLATFORMSH_CLI_TOKEN"
         PLATFORMSH_PROJECT_ID: "$PLATFORMSH_PROJECT_ID"
+        HYPERDRIVE_HELP: "false"
+        HYPERDRIVE_YES: "false"
+        HYPERDRIVE_NAME: "James T. Kirk"
+        HYPERDRIVE_EMAIL: "kirk@enterprise.mil"
+        HYPERDRIVE_VIM: "false"
         BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://nginx/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
 
 # The following entry creates a `lando platform` command that will run

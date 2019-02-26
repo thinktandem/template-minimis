@@ -9,19 +9,16 @@ services:
 
 before_install:
 
-  # Install Lando
+  # Install Hyperdrive
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
-  - curl -fsSL -o /tmp/lando.deb https://github.com/lando/lando/releases/download/v3.0.0-rc.12/lando-v3.0.0-rc.12.deb
-  - sudo dpkg -i /tmp/lando.deb
+  - curl -Ls https://github.com/lando/hyperdrive/releases/download/v0.5.4/hyperdrive > /usr/local/bin/hyperdrive \
+    && chmod +x /usr/local/bin/hyperdrive
 
   # Sanity check to make sure we are rolling
   - lando version
 
 script:
-  - docker version
-  - docker-compose --version
-
   # Switch the lando files and start
   - rm -f .lando.base.yml
   - cp -rf .lando.travis.yml .lando.yml
