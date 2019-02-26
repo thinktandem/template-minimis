@@ -42,7 +42,7 @@ script:
   # lando phpunit -c core --testsuite unit --exclude-group Composer
   # cd ..
 
-  - lando ssh -c "env"
+  - sleep 10
 
   # Do platform stuff
   # Verify we are logged in
