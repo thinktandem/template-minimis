@@ -12,16 +12,18 @@ before_install:
   # Install Hyperdrive
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
-  - curl -Ls https://github.com/lando/hyperdrive/releases/download/v0.5.4/hyperdrive > /usr/local/bin/hyperdrive \
-    && chmod +x /usr/local/bin/hyperdrive
-
-  # Sanity check to make sure we are rolling
-  - lando version
+  - sudo bash -c "curl -Ls https://github.com/lando/hyperdrive/releases/download/v0.5.4/hyperdrive > /usr/local/bin/hyperdrive"
+  - sudo chmod +x /usr/local/bin/hyperdrive
 
 script:
   # Switch the lando files and start
   - rm -f .lando.base.yml
   - cp -rf .lando.travis.yml .lando.yml
+
+  # Setup hyperdrive
+  - hyperdrive -y --name "James T. Kirk" --email kirk@enterprise.mil
+
+  # Start Lando
   - lando start -v
 
   # Run non-db required tests eg linting/code standards/unit tests
