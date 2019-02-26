@@ -19,6 +19,7 @@ before_install:
   - lando version
 
 script:
+  - docker version
 
   # Switch the lando files and start
   - rm -f .lando.base.yml
