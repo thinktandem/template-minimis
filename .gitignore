@@ -21,3 +21,6 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Lint cache
+.phplint-cache
