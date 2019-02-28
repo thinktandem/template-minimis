@@ -1,6 +1,17 @@
 # Change this name to something that makes sense for your project
 name: infiniteawesome
 
+# Excludes rarely edited folder / files to win performance.
+excludes:
+  - drush
+  - scripts
+  - vendor
+  - web/core
+  - web/modules/contrib
+  - web/profiles/contrib
+  - web/sites/default/files
+  - web/themes/contrib
+
 # Use the recipe appropriate for your application.
 recipe: drupal8
 
@@ -32,6 +43,8 @@ services:
     overrides:
       environment:
         BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://nginx/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
+        PLATFORMSH_CLI_TOKEN: "$PLATFORMSH_CLI_TOKEN"
+        PLATFORMSH_PROJECT_ID: "t5lb5eonwa4uq"
 
 # The following entry creates a `lando platform` command that will run
 # any Platform CLI command from inside the container if desired.

@@ -16,10 +16,6 @@ before_install:
   - sudo chmod +x /usr/local/bin/hyperdrive
 
 script:
-  # Switch the lando files and start
-  - rm -f .lando.base.yml
-  - cp -rf .lando.travis.yml .lando.yml
-
   # Add Repo key to prevent hyperdrive install errors.
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B05F25D762E3157
 
