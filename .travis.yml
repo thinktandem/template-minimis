@@ -30,8 +30,8 @@ script:
   - lando phplint
 
   # Check code standards
-  # lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
-  # lando phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc web/modules web/themes web/profiles
+  lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
+  lando phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc,theme web/modules/custom web/themes/custom web/profiles
 
   # Unit tests
   # cd web
