@@ -62,6 +62,9 @@ tooling:
   phpunit:
     service: appserver
     cmd: /app/vendor/bin/phpunit
+  phpstan:
+    service: appserver
+    cmd: /app/vendor/bin/phpstan
   behat:
     service: appserver
     cmd: /app/vendor/bin/behat

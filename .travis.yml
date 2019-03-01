@@ -4,6 +4,12 @@ language: php
 php:
   - 7.2
 
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+    - $HOME/.composer/cache/repo
+    - $TMPDIR/phpstan/cache
+
 services:
   - docker
 
@@ -36,6 +42,9 @@ script:
   # Unit tests
   - lando phpunit -c web/core --testsuite unit --exclude-group Composer web/modules/custom
   - lando phpunit -c web/core --testsuite unit --exclude-group Composer web/themes/custom
+
+  # Check for Drupal 9 Deprecations
+  - lando phpstan analyse web/modules/custom web/themes/custom
 
   # Sleep for 10 seconds so certs can load
   - sleep 10
