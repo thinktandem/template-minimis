@@ -30,13 +30,12 @@ script:
   - lando phplint
 
   # Check code standards
-  lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
-  lando phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc,theme web/modules/custom web/themes/custom web/profiles
+  - lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
+  - lando phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc,theme web/modules/custom web/themes/custom web/profiles
 
   # Unit tests
-  # cd web
-  # lando phpunit -c core --testsuite unit --exclude-group Composer
-  # cd ..
+  - lando phpunit -c web/core --testsuite unit --exclude-group Composer web/modules/custom
+  - lando phpunit -c web/core --testsuite unit --exclude-group Composer web/themes/custom
 
   # Sleep for 10 seconds so certs can load
   - sleep 10
