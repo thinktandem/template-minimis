@@ -28,4 +28,4 @@ exclude_patterns:
   - web/.ht.router.php
   - web/sites/*.php
   - web/sites/default/*.php
-  - test
+  - tests
