@@ -1,67 +1,67 @@
 {
-    "name": "thinktandem/minimis-project-platformsh",
-    "description": "Template for Tandem's Drupal 8 Minimis Distribution to work with Platformsh.",
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
     "type": "project",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "John Ouellet",
-            "email": "john@thinktandem.io",
-            "homepage": "https://thinktandem.io",
-            "role": "Developer"
+            "name": "",
+            "role": ""
         }
     ],
     "repositories": [
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/thinktandem/minimis"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/thinktandem/bootstrap"
         }
     ],
     "require": {
+        "php": ">=5.6",
         "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.2",
-        "thinktandem/minimis": "dev-8.x-1.x",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/console": "^1.0.2",
+        "drupal/core": "^8.6.0",
         "drush/drush": "^9.0.0",
+        "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
         "behat/behat": "3.*",
-        "behat/mink": "1.7.x-dev",
+        "behat/mink": "~1.7",
         "behat/mink-extension": "^2.2",
         "behat/mink-goutte-driver": "~1.2",
-        "drupal/coder" : "^8.2.12",
+        "drupal/coder": "^8.2.12",
         "drupal/drupal-extension": "^3.1",
         "drush-ops/behat-drush-endpoint": "^0.0.4",
         "jcalderonzumba/gastonjs": "~1.0.2",
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsStream": "~1.2",
+        "mglaman/phpstan-drupal": "^0.11.2",
+        "mikey179/vfsstream": "~1.2",
         "overtrue/phplint": "^0.2.4",
-        "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "^3.4.0",
+        "phpstan/phpstan-deprecation-rules": "^0.11.0",
+        "phpunit/phpunit": "^6.5",
         "squizlabs/php_codesniffer": "2.*",
+        "symfony/css-selector": "^3.4.0",
         "webflo/drupal-core-require-dev": "^8.6.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
     "autoload": {
         "classmap": [
             "scripts/composer/ScriptHandler.php"
-        ]
+        ],
+        "files": ["load.environment.php"]
     },
     "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "pre-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
@@ -69,25 +69,30 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "find web -name '.git' | xargs rm -rf"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "find web -name '.git' | xargs rm -rf"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ]
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "drush/Commands/{$name}": ["type:drupal-drush"]
         },
-        "patches-file": "composer.patches.json"
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        }
     }
 }
