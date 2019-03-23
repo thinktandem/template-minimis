@@ -44,7 +44,7 @@ services:
       environment:
         BEHAT_PARAMS: '{"extensions" : {"Behat\\MinkExtension" : {"base_url" : "http://nginx/"}, "Drupal\\DrupalExtension" : {"drush" :   {  "root":  "/app/web" }}}}'
         PLATFORMSH_CLI_TOKEN: "$PLATFORMSH_CLI_TOKEN"
-        PLATFORMSH_PROJECT_ID: "t5lb5eonwa4uq"
+        PLATFORMSH_PROJECT_ID: "PLATFORMSH_PROJECT_ID"
 
 # The following entry creates a `lando platform` command that will run
 # any Platform CLI command from inside the container if desired.
