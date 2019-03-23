@@ -35,7 +35,7 @@ config:
 # in the application container and auto-run `composer install`
 services:
   appserver:
-    run:
+    build:
       - "mkdir -p /var/www/.platformsh/bin"
       - "curl -fsSL -o /var/www/.platformsh/bin/platform https://github.com/platformsh/platformsh-cli/releases/download/v3.40.2/platform.phar"
       - "chmod ug+x /var/www/.platformsh/bin/platform"
