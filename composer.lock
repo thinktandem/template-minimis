@@ -2558,18 +2558,18 @@
             }
         },
         {
-            "name": "drupal/config_rewrite",
-            "version": "1.1.0",
+            "name": "drupal/core",
+            "version": "8.6.13",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/config_rewrite",
-                "reference": "8.x-1.1"
+                "url": "https://github.com/drupal/core.git",
+                "reference": "8d5b80030ac3f13df2d66aeef0ea388fd9a90632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_rewrite-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "fc5f8b72fb59d51aa524a20173d037d4adee9997"
+                "url": "https://api.github.com/repos/drupal/core/zipball/8d5b80030ac3f13df2d66aeef0ea388fd9a90632",
+                "reference": "8d5b80030ac3f13df2d66aeef0ea388fd9a90632",
+                "shasum": ""
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4498,41 +4498,8 @@
             "license": [
                 "GPL-2.0+"
             ],
-            "authors": [
-                {
-                    "name": "Darvanen",
-                    "homepage": "https://www.drupal.org/user/1068770"
-                },
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "Deciphered",
-                    "homepage": "https://www.drupal.org/user/103796"
-                },
-                {
-                    "name": "ademarco",
-                    "homepage": "https://www.drupal.org/user/186696"
-                },
-                {
-                    "name": "asciikewl",
-                    "homepage": "https://www.drupal.org/user/147292"
-                },
-                {
-                    "name": "pescetti",
-                    "homepage": "https://www.drupal.org/user/436244"
-                },
-                {
-                    "name": "pvhee",
-                    "homepage": "https://www.drupal.org/user/108811"
-                }
-            ],
-            "description": "This is a very simple module to make global token values available as an input filter.",
-            "homepage": "https://www.drupal.org/project/token_filter",
-            "support": {
-                "source": "http://cgit.drupalcode.org/token_filter"
-            }
+            "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+            "time": "2019-03-20T06:01:19+00:00"
         },
         {
             "name": "drush/drush",
@@ -7386,219 +7353,6 @@
             "time": "2019-02-23T15:06:07+00:00"
         },
         {
-            "name": "thinktandem/bootstrap",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thinktandem/bootstrap",
-                "reference": "262c0c92e2ed109230b9344e0c312fc0bf491c1c"
-            },
-            "type": "drupal-library",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "John Ouellet",
-                    "email": "john@thinktandem.io"
-                }
-            ],
-            "description": "Bootstrap 4.0.0",
-            "homepage": "https://github.com/thinktandem/bootstrap",
-            "time": "2019-02-02T19:26:38+00:00"
-        },
-        {
-            "name": "thinktandem/minimis",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thinktandem/minimis",
-                "reference": "f7856d60a5b608b8f89d515a9dff9998a1cc7981"
-            },
-            "require": {
-                "composer/installers": "^1.2",
-                "cweagans/composer-patches": "^1.6",
-                "drupal-composer/drupal-scaffold": "^2.2",
-                "drupal/admin_toolbar": "^1.23",
-                "drupal/adminimal_admin_toolbar": "^1.5",
-                "drupal/adminimal_theme": "^1.3",
-                "drupal/big_pipe_sessionless": "^1.2",
-                "drupal/bootstrap_barrio": "^4.6",
-                "drupal/bootstrap_library": "^1.9",
-                "drupal/config_readonly": "^1.0",
-                "drupal/config_rewrite": "^1.1",
-                "drupal/config_split": "^1.2",
-                "drupal/console": "^1.0.2",
-                "drupal/core": "^8.6",
-                "drupal/ctools": "^3.0",
-                "drupal/dynamic_layouts": "^1.0",
-                "drupal/embed": "^1.0",
-                "drupal/entity_browser": "^2.0",
-                "drupal/entity_embed": "1.x-dev",
-                "drupal/google_analytics": "^2.3",
-                "drupal/inline_entity_form": "^1.0",
-                "drupal/layout_builder_restrictions": "^1.3",
-                "drupal/lazy": "^1.1",
-                "drupal/linkit": "^4.3",
-                "drupal/media_entity_browser": "2.x-dev",
-                "drupal/metatag": "^1.3",
-                "drupal/paragraphs": "^1.2",
-                "drupal/pathauto": "^1.0",
-                "drupal/redirect": "^1.0",
-                "drupal/schema_metatag": "^1.0",
-                "drupal/simple_sitemap": "^3.0",
-                "drupal/token": "^1.0",
-                "drupal/token_filter": "^1.1",
-                "drush/drush": "^9.0.0",
-                "thinktandem/bootstrap": "dev-master",
-                "webflo/drupal-finder": "^1.0.0",
-                "webmozart/path-util": "^2.3",
-                "zaporylie/composer-drupal-optimizations": "^1.0"
-            },
-            "conflict": {
-                "drupal/drupal": "*"
-            },
-            "require-dev": {
-                "behat/behat": "3.*",
-                "behat/mink": "~1.7",
-                "behat/mink-extension": "^2.2",
-                "behat/mink-goutte-driver": "~1.2",
-                "drupal/coder": "^8.2.12",
-                "drupal/drupal-extension": "^3.1",
-                "drush-ops/behat-drush-endpoint": "^0.0.4",
-                "jcalderonzumba/gastonjs": "~1.0.2",
-                "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-                "mikey179/vfsstream": "~1.2",
-                "overtrue/phplint": "^0.2.4",
-                "phpunit/phpunit": "~4.8",
-                "squizlabs/php_codesniffer": "2.*",
-                "symfony/css-selector": "^3.4.0",
-                "webflo/drupal-core-require-dev": "^8.6.0"
-            },
-            "type": "drupal-profile",
-            "extra": {
-                "installer-paths": {
-                    "web/core": [
-                        "type:drupal-core"
-                    ],
-                    "web/libraries/{$name}": [
-                        "type:drupal-library"
-                    ],
-                    "web/modules/contrib/{$name}": [
-                        "type:drupal-module"
-                    ],
-                    "web/profiles/contrib/{$name}": [
-                        "type:drupal-profile"
-                    ],
-                    "web/themes/contrib/{$name}": [
-                        "type:drupal-theme"
-                    ],
-                    "web/modules/custom/{$name}": [
-                        "type:drupal-custom-module"
-                    ],
-                    "web/themes/custom/{$name}": [
-                        "type:drupal-custom-theme"
-                    ],
-                    "drush/contrib/{$name}": [
-                        "type:drupal-drush"
-                    ]
-                },
-                "patches-file": "composer.patches.json"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tandem\\composer\\": "src/composer"
-                }
-            },
-            "scripts": {
-                "drupal-scaffold": [
-                    "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-                ],
-                "pre-install-cmd": [
-                    "Tandem\\composer\\ScriptHandler::checkComposerVersion"
-                ],
-                "pre-update-cmd": [
-                    "Tandem\\composer\\ScriptHandler::checkComposerVersion"
-                ],
-                "post-install-cmd": [
-                    "Tandem\\composer\\ScriptHandler::createRequiredFiles",
-                    "Tandem\\composer\\ScriptHandler::removeGitDirectories",
-                    "@composer drupal-scaffold"
-                ],
-                "post-update-cmd": [
-                    "Tandem\\composer\\ScriptHandler::createRequiredFiles",
-                    "Tandem\\composer\\ScriptHandler::removeGitDirectories"
-                ],
-                "nuke": [
-                    "rm -r -f web vendor composer.lock"
-                ]
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "John Ouellet",
-                    "email": "john@thinktandem.io",
-                    "homepage": "https://thinktandem.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Thinktandem's Minimis Distribution",
-            "time": "2019-03-23T15:32:19+00:00"
-        },
-        {
-            "name": "twbs/bootstrap",
-            "version": "v4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "8f7bd419935adfcd53c471a0202083464800619e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/8f7bd419935adfcd53c471a0202083464800619e",
-                "reference": "8f7bd419935adfcd53c471a0202083464800619e",
-                "shasum": ""
-            },
-            "replace": {
-                "twitter/bootstrap": "self.version"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
-                },
-                {
-                    "name": "Mark Otto",
-                    "email": "markdotto@gmail.com"
-                }
-            ],
-            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-            "homepage": "https://getbootstrap.com/",
-            "keywords": [
-                "JS",
-                "css",
-                "framework",
-                "front-end",
-                "mobile-first",
-                "responsive",
-                "sass",
-                "web"
-            ],
-            "time": "2018-04-09T16:00:23+00:00"
-        },
-        {
             "name": "twig/twig",
             "version": "v1.38.4",
             "source": {
@@ -9412,7 +9166,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🅱 Nette Bootstrap: the simple way to configure and bootstrap your Nette application.",
+            "description": "? Nette Bootstrap: the simple way to configure and bootstrap your Nette application.",
             "homepage": "https://nette.org",
             "keywords": [
                 "bootstrapping",
@@ -9477,7 +9231,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "💎 Nette Dependency Injection Container: Flexible, compiled and full-featured DIC with perfectly usable autowiring and support for all new PHP 7.1 features.",
+            "description": "? Nette Dependency Injection Container: Flexible, compiled and full-featured DIC with perfectly usable autowiring and support for all new PHP 7.1 features.",
             "homepage": "https://nette.org",
             "keywords": [
                 "compiled",
@@ -9542,7 +9296,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🔍 Nette Finder: find files and directories with an intuitive API.",
+            "description": "? Nette Finder: find files and directories with an intuitive API.",
             "homepage": "https://nette.org",
             "keywords": [
                 "filesystem",
@@ -9602,7 +9356,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🍸 Nette NEON: encodes and decodes NEON file format.",
+            "description": "? Nette NEON: encodes and decodes NEON file format.",
             "homepage": "http://ne-on.org",
             "keywords": [
                 "export",
@@ -9665,7 +9419,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 7.3 features.",
+            "description": "? Nette PHP Generator: generates neat PHP code for you. Supports new PHP 7.3 features.",
             "homepage": "https://nette.org",
             "keywords": [
                 "code",
@@ -9729,7 +9483,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🍀 Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
+            "description": "? Nette RobotLoader: high performance and comfortable autoloader that will search and autoload classes within your application.",
             "homepage": "https://nette.org",
             "keywords": [
                 "autoload",
@@ -9802,7 +9556,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🛠 Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "description": "? Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
             "homepage": "https://nette.org",
             "keywords": [
                 "array",
