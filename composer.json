@@ -21,10 +21,6 @@
             "url": "https://github.com/thinktandem/minimis"
         },
         {
-            "type": "git",
-            "url": "https://github.com/thinktandem/bootstrap"
-        },
-        {
             "type": "package",
             "package": {
                 "name": "dinbror/blazy",
