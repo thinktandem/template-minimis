@@ -1,5 +1,5 @@
 {
-    "name": "thinktandem/minimis-project-platformsh",
+    "name": "thinktandem/template-minimis",
     "description": "Template for Tandem's Drupal 8 Minimis Distribution to work with Platformsh.",
     "type": "project",
     "license": "GPL-2.0+",
@@ -42,22 +42,22 @@
         }
     ],
     "require": {
-        "php": ">=5.6",
+        "php": ">=7.0.8",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/bootstrap_site_alert": "^1.7",
         "drupal/console": "^1.0.2",
         "drush/drush": "^9.0.0",
         "thinktandem/minimis": "dev-8.x-1.x",
-        "vlucas/phpdotenv": "^2.4",
+        "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
         "behat/behat": "3.*",
-        "behat/mink": "1.7.x-dev",
+        "behat/mink": "1.8.0 | 1.7.1.1 | 1.7.x-dev",
         "behat/mink-extension": "^2.2",
         "behat/mink-goutte-driver": "~1.2",
         "drupal/coder": "^8.3",
@@ -72,7 +72,7 @@
         "phpunit/phpunit": "^6.5",
         "squizlabs/php_codesniffer": "^3.0",
         "symfony/css-selector": "^3.4.0",
-        "webflo/drupal-core-require-dev": "^8.6.0"
+        "drupal/core-dev": "^8.8.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -86,10 +86,10 @@
         "files": ["load.environment.php"]
     },
     "scripts": {
-        "fix": "phpcbf --standard=Drupal --ignore=*/node_modules/*,/vendor/*,*.md,*.tpl.php,*.css,*.scss --extensions=install,module,php,inc web/modules/custom web/themes/custom web/profiles/custom .mannequin.php",
+        "fix": "phpcbf --standard=Drupal --ignore=*/node_modules/*,/vendor/*,*.md,*.tpl.php,*.css,*.scss --extensions=install,module,php,inc web/modules/custom web/themes/custom",
         "lint": [
           "phplint",
-          "phpcs -n --report=full --standard=Drupal --ignore=*/node_modules/*,/vendor/*,*.md,*.tpl.php,*.css,*.scss --extensions=install,module,php,inc web/modules/custom web/themes/custom web/profiles/custom .mannequin.php"
+          "phpcs -n --report=full --standard=Drupal --ignore=*/node_modules/*,/vendor/*,*.md,*.tpl.php,*.css,*.scss --extensions=install,module,php,inc web/modules/custom web/themes/custom"
         ],
         "pre-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
@@ -120,9 +120,8 @@
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
         "drupal-scaffold": {
-            "initial": {
-                ".editorconfig": "../.editorconfig",
-                ".gitattributes": "../.gitattributes"
+            "locations": {
+                "web-root": "web/"
             }
         }
     }
