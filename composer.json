@@ -123,6 +123,7 @@
             "locations": {
                 "web-root": "web/"
             }
-        }
+        },
+        "patches-file": "composer.patches.json"
     }
 }
