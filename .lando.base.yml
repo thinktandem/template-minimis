@@ -13,7 +13,7 @@ excludes:
   - web/themes/contrib
 
 # Use the recipe appropriate for your application.
-recipe: drupal8
+recipe: drupal9
 
 # Configure the D8 recipe to match up closer to a vanilla platform.sh stack
 config:
@@ -25,14 +25,14 @@ config:
   webroot: web
 
   # Set this to match the version in your .platform.app.yaml.
-  php: 7.3
+  php: 7.4
 
   # Lando defaults to the latest MySQL release, but Platform.sh uses MariaDB.
   # Specify the version to match what's in services.yaml.
-  database: mariadb
+  database: mariadb:10.5
 
   # Sets the composer version.
-  composer_version: '1.10.17'
+  composer_version: 2
 
 # The following additional build step will install the Platform CLI
 # in the application container and auto-run `composer install`
