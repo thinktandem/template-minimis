@@ -11,14 +11,14 @@ if (isset($_SERVER['LANDO'])) {
 
   // Set the database creds
   $databases['default']['default'] = [
-    'database' => 'drupal8',
-    'username' => 'drupal8',
-    'password' => 'drupal8',
+    'database' => 'drupal9',
+    'username' => 'drupal9',
+    'password' => 'drupal9',
     'host' => 'database',
     'port' => '3306',
     'driver' => 'mysql'
   ];
-  
+
   // Only load dev settings on non admin pages.
   // This prevents very slow loading admin pages.
   // Especially when using some modules like layout builder.

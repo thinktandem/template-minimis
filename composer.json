@@ -35,7 +35,7 @@
         "cweagans/composer-patches": "^1.6",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "drush/drush": "^10.0.0",
-        "thinktandem/minimis": "dev-8.x-1.x",
+        "thinktandem/minimis": "dev-9.x-1.x",
         "jcalderonzumba/mink-phantomjs-driver": "^0.3",
         "vlucas/phpdotenv": "^5.0",
         "zaporylie/composer-drupal-optimizations": "^1.1",

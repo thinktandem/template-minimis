@@ -1,6 +1,6 @@
 # Drupal project template for Platform.sh
 
-This project provides a starter kit for Drupal 8 projects hosted on [Platform.sh](http://platform.sh). It
+This project provides a starter kit for Drupal 9 projects hosted on [Platform.sh](http://platform.sh). It
 is very closely based on the [Drupal Composer project](https://github.com/drupal-composer/drupal-project).
 
 ## Starting a new project
